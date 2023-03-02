@@ -1,0 +1,135 @@
+.price-card {
+  background-color: white;
+  margin-bottom: 1rem;
+  margin: 1rem 10%;
+
+  height: 500px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 10px;
+  color: #999;
+  position: relative;
+}
+
+.price-card.clicked {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price-card.clicked ul {
+  list-style-type: none;
+}
+.price-card.clicked ul li {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.price-card h3 {
+  font-size: 2.4rem;
+  color: #999;
+
+  padding-top: 2rem;
+}
+
+.price-card svg {
+  width: 200px;
+  padding-top: 2rem;
+}
+
+.price-card p {
+  font-size: 2rem;
+  padding-top: 2rem;
+  font-weight: 700;
+}
+
+.price-card button {
+  background-color: transparent;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.price-card button:hover {
+  transform: translateY(-1px);
+  transition: all 0.4s;
+}
+
+.premiumPrice {
+  background-color: #222;
+  color: #5aff15;
+}
+.premiumPrice h3 {
+  color: #5aff15;
+}
+
+.premiumPrice button {
+  color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 12px;
+}
+
+.premiumPrice button:hover {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 20px;
+}
+
+.premiumPrice button:active {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 6px;
+  transform: translateY(1px);
+}
+.pricing {
+  margin-top: 3rem;
+}
+@media (min-width: 1000px) {
+  .pricing {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left center right";
+  }
+
+  .price-card {
+    width: 300px;
+    margin: 1rem 2%;
+    margin-top: 2.5rem;
+  }
+
+  .premiumPrice {
+    grid-area: center;
+    margin-top: 1rem;
+  }
+
+  .premiumPriceAnimation {
+    grid-area: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .price-card {
+    height: 700px;
+    width: 500px;
+    margin: inherit 3%;
+  }
+
+  .price-card svg {
+    width: 300px;
+  }
+
+  .price-card p {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  .price-card button {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+}

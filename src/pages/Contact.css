@@ -1,0 +1,13 @@
+.contact-page form {
+  padding-top: 7rem;
+  box-shadow: none;
+}
+
+.contact-page {
+  height: 100vh;
+  background-color: #222;
+}
+
+.contact-page nav {
+  background-color: #222;
+}

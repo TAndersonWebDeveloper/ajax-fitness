@@ -1,0 +1,37 @@
+.amenity {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 5rem !important;
+  margin-bottom: 2rem;
+}
+
+.amenity svg {
+  font-size: 4rem;
+  margin-right: 2rem;
+  color: #5aff15;
+}
+
+.amenity p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .amenity {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 0 !important;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .amenity {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 2rem !important;
+    padding-left: 1rem;
+  }
+}

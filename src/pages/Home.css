@@ -1,0 +1,230 @@
+.landing {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.664)),
+    url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 999;
+  /* clip-path: polygon(100% 0, 100% 100%, 50% 97%, 0 100%, 0 0); */
+}
+
+.home-wrapper {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  height: 50%;
+  transform: translateY(50%);
+  text-align: right;
+}
+
+.home-tagline {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-tagline .home-emphasis {
+  color: #5aff15;
+  font-size: 4rem;
+  margin: 0.25rem;
+}
+
+.home-cta {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  position: relative;
+  border: 1px solid #5aff15;
+  padding: 1rem 2rem;
+  z-index: 99;
+  text-transform: uppercase;
+}
+
+.home-cta:hover {
+  color: #5aff15;
+}
+
+.home-cta:active {
+  color: white;
+}
+
+.home-text--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  background-color: #222;
+  box-shadow: rgba(0, 0, 0, 0.678) 1.95px 1.95px 10px;
+}
+
+.about-img--container {
+  width: 50vw;
+  height: 70vh;
+}
+
+.about-txt--container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.about-txt--container h2 span {
+  color: #5aff15;
+  font-weight: 700;
+}
+
+.about-header {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+  display: inline-block;
+  width: fit-content;
+  border-bottom: 1px solid #5aff15;
+}
+
+.about-img--container {
+  background-image: url("https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80");
+  background-size: cover;
+  background-position: right;
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0);
+}
+
+.trial {
+  display: flex;
+  font-size: 2rem;
+  text-align: center;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #222;
+  padding: 2rem 0;
+  border-top: 1px solid #5aff15;
+  border-bottom: 1px solid #5aff15;
+}
+.trial p {
+  margin-right: 2rem;
+}
+
+.trial a {
+  color: #5aff15;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 12px;
+  transition: all 0.5s;
+}
+.trial a:hover {
+  transform: translateY(-1px);
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 20px;
+  transition: all 0.5s;
+}
+
+.trial a:active {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 6px;
+  transform: translateY(1px);
+}
+@media (max-width: 700px) {
+  .home-tagline {
+    font-size: 1.5rem;
+    z-index: 0;
+  }
+  .home-emphasis {
+    font-size: 2rem;
+    display: block;
+  }
+
+  .home-wrapper {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    transform: translateY(50%);
+    text-align: center;
+    padding: none;
+  }
+  .home-text--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: none;
+  }
+
+  .landing {
+    height: 100vh;
+  }
+  .trial {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  .trial p {
+    margin-right: 0rem;
+  }
+
+  .trial a {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+  }
+  .about {
+    flex-direction: column;
+  }
+
+  .about-txt--container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-txt--container h2 span {
+    color: #5aff15;
+    font-weight: 700;
+  }
+
+  .about-header {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem !important;
+  }
+
+  .about-img--container {
+    width: 100vw;
+    height: 40vh;
+    clip-path: polygon(100% 0, 1000% 100%, 100% 100%, 0 100%, 0 0);
+  }
+
+  .amenity svg {
+    font-size: 4rem;
+    margin-right: 2rem;
+    color: #5aff15;
+  }
+
+  .amenity p {
+    font-size: 1rem !important;
+  }
+}

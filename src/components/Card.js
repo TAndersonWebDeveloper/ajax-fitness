@@ -7,7 +7,7 @@ function Card(props) {
   };
   return (
     <div
-      className={`price-card ${!cardClicked ? "" : "clicked"} ${
+      className={`price-card  ${!cardClicked ? "" : "clicked"} ${
         props.premiumPrice
       }`}
     >

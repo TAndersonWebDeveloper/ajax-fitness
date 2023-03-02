@@ -607,7 +607,11 @@ function Home() {
       </section>
 
       <section className="pricing">
-        <AnimationOnScroll animateIn="animate__fadeIn" duration={1}>
+        <AnimationOnScroll
+          animateIn="animate__fadeIn"
+          duration={1}
+          className="margin-bottom"
+        >
           <Card
             title="Day Pass"
             price="$20/Day"
@@ -617,7 +621,11 @@ function Home() {
             amenityThree="Use of locker room"
           />
         </AnimationOnScroll>
-        <AnimationOnScroll animateIn="animate__fadeIn" duration={1}>
+        <AnimationOnScroll
+          animateIn="animate__fadeIn"
+          duration={1}
+          className="margin-bottom"
+        >
           <Card
             title="Monthy"
             price="$45/Month"
@@ -630,7 +638,7 @@ function Home() {
         <AnimationOnScroll
           animateIn="animate__fadeIn"
           duration={1.75}
-          className="premiumPriceAnimation"
+          className="premiumPriceAnimation margin-bottom"
         >
           {" "}
           <Card

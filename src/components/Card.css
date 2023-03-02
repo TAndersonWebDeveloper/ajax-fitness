@@ -44,6 +44,10 @@
   font-weight: 700;
 }
 
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+
 .price-card button {
   background-color: transparent;
   margin-top: 2rem;

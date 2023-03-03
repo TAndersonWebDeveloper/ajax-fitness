@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExerciseCard from "../components/ExerciseCard";
+import SkeletonCard from "../components/SkeletonCard";
 
 import "./Workouts.css";
 
@@ -11,6 +12,7 @@ const MUSCLE_GROUPS = [
   { name: "delts" },
   { name: "biceps" },
   { name: "triceps" },
+  { name: "traps" },
 ];
 
 function Workouts() {
@@ -71,7 +73,8 @@ function Workouts() {
               );
             })}
         </div>
-        {loading && <h2>Loading</h2>}
+
+        {loading && <SkeletonCard />}
       </div>
       {searched && (
         <div className="back-btn--container">

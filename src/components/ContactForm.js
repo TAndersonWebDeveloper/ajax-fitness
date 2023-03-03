@@ -65,10 +65,11 @@ function ContactForm() {
               <textarea cols="50" rows="4" placeholder="Message"></textarea>
               <label htmlFor="cars">Membership Inquiry:</label>
               <select name="membership" id="membership">
-                <option value="general">General Inquiry</option>
+                <option value="trial">7-Day Free Trial</option>
                 <option value="daily">Daily</option>
                 <option value="monthly">Monthly</option>
                 <option value="premium">Premium</option>
+                <option value="general">General Inquiry</option>
               </select>
               <button type="submit">Submit</button>
             </>

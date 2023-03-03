@@ -9,6 +9,7 @@ import { CgGym } from "react-icons/cg";
 import { IoIosCafe } from "react-icons/io";
 import { MdEmojiPeople } from "react-icons/md";
 import ContactForm from "../components/ContactForm";
+
 const cardOneIcon = (
   <svg width="100" viewBox="0 0 731.67 668.53">
     <g>

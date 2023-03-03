@@ -23,7 +23,7 @@ function Workouts() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "66e99de178msh34b1a3c2149a362p1d2a26jsn247b7d08f813",
+      "X-RapidAPI-Key": `${process.env.REACT_APP_WORKOUT_API}`,
       "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
     },
   };
@@ -55,7 +55,7 @@ function Workouts() {
 
   return (
     <div className="workout-container">
-      <div>
+      <div className="workout-loading--container">
         <div className="workout-btn--container">
           {!searched &&
             MUSCLE_GROUPS.map((muscle) => {

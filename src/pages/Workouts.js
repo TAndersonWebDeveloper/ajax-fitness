@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ExerciseCard from "../components/ExerciseCard";
-import TargetMuscle from "../components/TargetMuscle";
+
 import "./Workouts.css";
 
 const MUSCLE_GROUPS = [
@@ -16,7 +16,6 @@ const MUSCLE_GROUPS = [
 function Workouts() {
   const [exerciseList, setExerciseList] = useState([]);
   const [searchedExercise, setSearchedExercise] = useState("");
-  const [noResults, setNoResults] = useState(false);
   const [searched, setSearched] = useState(false);
   const options = {
     method: "GET",
@@ -41,10 +40,6 @@ function Workouts() {
       .catch((err) => console.error(err));
   };
 
-  const searchHandler = (muscle) => {
-    setSearchedExercise(muscle);
-  };
-
   const submitHandler = (exercise) => {
     getExercise(exercise);
   };
@@ -58,7 +53,7 @@ function Workouts() {
             return (
               <button
                 onClick={() => {
-                  console.log(target);
+                  console.log(searchedExercise);
                   setSearchedExercise(target);
                   submitHandler(target);
                 }}

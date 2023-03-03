@@ -40,14 +40,21 @@
   padding: 1rem 2rem;
   z-index: 99;
   text-transform: uppercase;
+  color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 12px;
+  transition: all 0.5s;
 }
 
 .home-cta:hover {
-  color: #5aff15;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 20px;
+  transition: all 0.5s;
 }
 
 .home-cta:active {
-  color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 6px;
 }
 
 .home-text--wrapper {
@@ -183,8 +190,8 @@
   }
 
   .trial a {
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
     padding: 1rem 2rem;
   }
   .about {
@@ -195,7 +202,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: flex-start;
     margin: 0;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -203,6 +210,7 @@
 
   .about-txt--container h2 span {
     color: #5aff15;
+    font-size: 2.4rem;
     font-weight: 700;
   }
 
@@ -216,6 +224,10 @@
     width: 100vw;
     height: 40vh;
     clip-path: polygon(100% 0, 1000% 100%, 100% 100%, 0 100%, 0 0);
+  }
+
+  .amenity {
+    margin: 1rem !important;
   }
 
   .amenity svg {

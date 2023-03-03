@@ -6,7 +6,7 @@
   height: 500px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 10px;
-  color: #999;
+  color: #222;
   position: relative;
 }
 
@@ -28,8 +28,6 @@
 
 .price-card h3 {
   font-size: 2.4rem;
-  color: #999;
-
   padding-top: 2rem;
 }
 
@@ -45,7 +43,7 @@
 }
 
 .margin-bottom {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .price-card button {

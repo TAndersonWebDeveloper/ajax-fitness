@@ -17,9 +17,30 @@
   width: 80%;
   margin: 0 auto;
   background-color: white;
-
+  text-align: center;
   border-radius: 10px;
   margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.exercise-card img {
+  width: 100%;
+}
+
+.back-btn {
+  margin: 0 auto;
+}
+
+.back-btn--container {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+}
+
+.exercise-card h3,
+.exercise-card p {
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .workout-container button {
@@ -32,9 +53,18 @@
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(2, 250, 64, 0.897) 0px 0px 12px;
   color: white;
-  margin-left: 1.5rem;
   width: 60%;
   margin-bottom: 2rem;
+}
+
+.workout-container button:hover {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 15px;
+}
+
+.workout-container button:active {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(2, 250, 64, 0.897) 0px 0px 8px;
 }
 
 @media (min-width: 800px) {
@@ -53,8 +83,8 @@
     padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    margin-bottom: 2rem;
+    align-content: center;
+    justify-items: center;
   }
 
   .workout-container button {
@@ -67,12 +97,38 @@
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
       rgba(2, 250, 64, 0.897) 0px 0px 12px;
     color: white;
-    margin-left: 1.5rem;
+
     width: 90%;
     gap: 1rem;
     margin-bottom: 4rem;
   }
   .workout-container button:last-child {
     grid-column-start: 2;
+  }
+
+  .exercise-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    width: 600px;
+    height: 700px;
+  }
+
+  .exercise-card img {
+    width: 500px;
+  }
+
+  .exercise-card--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .back-btn {
+    width: 400px !important;
+  }
+  .back-btn--container {
+    margin-bottom: 4rem;
   }
 }

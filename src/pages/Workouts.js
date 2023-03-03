@@ -17,6 +17,7 @@ function Workouts() {
   const [exerciseList, setExerciseList] = useState([]);
   const [searchedExercise, setSearchedExercise] = useState("");
   const [searched, setSearched] = useState(false);
+  const [loading, setLoading] = useState(false);
   const options = {
     method: "GET",
     headers: {
@@ -26,6 +27,7 @@ function Workouts() {
   };
 
   const getExercise = async (exercise) => {
+    setLoading(true);
     await fetch(
       `https://exercisedb.p.rapidapi.com/exercises/target/${exercise}`,
       options
@@ -35,6 +37,7 @@ function Workouts() {
       })
       .then((data) => {
         setExerciseList(data);
+        setLoading(false);
         setSearched(true);
       })
       .catch((err) => console.error(err));
@@ -44,37 +47,45 @@ function Workouts() {
     getExercise(exercise);
   };
 
+  const backHandler = () => {
+    setSearched(false);
+  };
+
   return (
     <div className="workout-container">
       <div>
         <div className="workout-btn--container">
-          {MUSCLE_GROUPS.map((muscle) => {
-            const target = muscle.name;
-            return (
-              <button
-                onClick={() => {
-                  console.log(searchedExercise);
-                  setSearchedExercise(target);
-                  submitHandler(target);
-                }}
-              >
-                {muscle.name.toUpperCase()}
-              </button>
-            );
-          })}
+          {!searched &&
+            MUSCLE_GROUPS.map((muscle) => {
+              const target = muscle.name;
+              return (
+                <button
+                  onClick={() => {
+                    console.log(searchedExercise);
+                    setSearchedExercise(target);
+                    submitHandler(target);
+                  }}
+                >
+                  {muscle.name.toUpperCase()}
+                </button>
+              );
+            })}
         </div>
+        {loading && <h2>Loading</h2>}
       </div>
-
-      {searched &&
-        exerciseList.map((exercise) => {
-          return (
-            <ExerciseCard
-              name={exercise.name}
-              img={exercise.gifUrl}
-              bodypart={exercise.target}
-            />
-          );
-        })}
+      {searched && (
+        <div className="back-btn--container">
+          <button className="back-btn" onClick={backHandler}>
+            Back
+          </button>
+        </div>
+      )}
+      <div className="exercise-card--container">
+        {searched &&
+          exerciseList.map((exercise) => {
+            return <ExerciseCard name={exercise.name} img={exercise.gifUrl} />;
+          })}
+      </div>
     </div>
   );
 }

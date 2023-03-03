@@ -29,9 +29,10 @@
 @media (max-width: 1400px) {
   .amenity {
     display: flex;
-    align-items: left;
-    justify-content: left;
-    margin: 2rem !important;
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 1rem;
+    margin-left: 0rem !important;
+    margin-top: 1rem !important;
   }
 }

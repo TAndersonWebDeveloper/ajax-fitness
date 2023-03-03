@@ -1,4 +1,3 @@
-import { set } from "mongoose";
 import React, { useState } from "react";
 import ExerciseCard from "../components/ExerciseCard";
 import TargetMuscle from "../components/TargetMuscle";

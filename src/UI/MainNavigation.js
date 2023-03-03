@@ -16,7 +16,7 @@ function MainNavigation() {
 
   window.addEventListener("scroll", () => {
     setNavIsOpen(false);
-    if (window.pageYOffset > 10) {
+    if (window.pageYOffset > 1) {
       setScrolled(true);
     } else {
       setScrolled(false);

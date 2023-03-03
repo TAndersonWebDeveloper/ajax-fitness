@@ -37,6 +37,7 @@
     position: fixed;
     z-index: 9999;
     padding-bottom: 1rem;
+    background-color: #222222c0;
   }
 
   .scrolled {
@@ -68,7 +69,6 @@
   }
 
   .menu-btn--container {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     transition: all 0.5s;
@@ -86,17 +86,17 @@
   .menu-btn--middle,
   .menu-btn--bottom {
     height: 2px;
-    width: 30px;
+    width: 40px;
     background-color: white;
     margin-top: 1.3rem;
     transition: all 0.5s;
     z-index: 9999;
   }
   .menu-btn--top.open {
-    transform: rotate(45deg) translateY(2rem);
+    transform: rotate(-45deg) translateY(2rem);
   }
   .menu-btn--bottom.open {
-    transform: rotate(-45deg) translateY(-2rem);
+    transform: rotate(45deg) translateY(-2rem);
   }
   .menu-btn--middle.open {
     opacity: 0;
